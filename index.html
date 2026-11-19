@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b0810">
   <meta name="description" content="Портфолио Оксаны Леонтьевой. Видео, интерфейсы и графический дизайн.">
-  <title>Оксана Леонтьева — портфолио</title>
+  <title>Портфолио Оксаны Леонтьевой</title>
   <link rel="icon" href="./assets/monogram.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css?v=7b9a482">
-  <script src="./gallery.js" defer></script>
+  <link rel="stylesheet" href="./styles.css?v=case-gallery">
+  <script src="./gallery.js?v=case-gallery" defer></script>
 </head>
 <body>
   <a class="skip" href="#gallery">Перейти к работам</a>
@@ -38,12 +38,12 @@
         </figure>
         <span class="spark hero-spark spark-two" aria-hidden="true"></span>
         <span class="spark hero-spark spark-three" aria-hidden="true"></span>
-        <span class="butterfly butterfly-violet" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-        <span class="butterfly butterfly-amber" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-        <span class="butterfly butterfly-rose" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span class="butterfly butterfly-violet" aria-hidden="true"></span>
+        <span class="butterfly butterfly-amber" aria-hidden="true"></span>
+        <span class="butterfly butterfly-rose" aria-hidden="true"></span>
         <div class="hero-copy">
           <p class="eyebrow">Портфолио</p>
-          <h1 id="hero-name">Привет!<br>Я — <span>Оксана</span></h1>
+          <h1 id="hero-name">Привет!<br>Я <span>Оксана</span></h1>
           <p class="hero-line">Снимаю и монтирую видео, работаю с графикой и интерфейсами.</p>
           <a class="button" href="#gallery" data-filter="all">Смотреть работы <span aria-hidden="true">↘</span></a>
         </div>
@@ -105,6 +105,13 @@
                 </div>
               </section>
               <section class="case-section">
+                <h3>Графика для роликов</h3>
+                <div class="case-grid">
+                  <figure><img src="./assets/arcana-cover.webp" alt="Обложка с картой и числом 13" width="1280" height="720"><figcaption>Обложка с крупной цифрой 13</figcaption></figure>
+                  <figure><img src="./assets/arcana-graphic.webp" alt="Кадр со схемой из видео о числе 13" width="640" height="360"><figcaption>Кадр со схемой из ролика</figcaption></figure>
+                </div>
+              </section>
+              <section class="case-section">
                 <h3>Shorts</h3>
                 <div class="reel-list short-list">
                   <a href="https://www.youtube.com/shorts/NDTk2LGY738"><img src="./assets/youtube-short-october.webp" alt=""><span><strong>20 октября 2026</strong></span></a>
@@ -122,39 +129,54 @@
               <span class="card-arrow" aria-hidden="true">↗</span>
             </button>
             <template>
-              <p>Приложение для часов и кольца B8. Данные об активности и дневник сахара находятся в разделе «Здоровье».</p>
-              <p class="case-note">На обоих экранах заполнены демонстрационные данные.</p>
-              <div class="case-grid watch-detail">
-                <section class="case-section">
-                  <h3>Главный экран</h3>
-                  <p>Статус подключения, показание глюкозы, питание, шаги, пульс и кислород. Сохранена нижняя навигация приложения.</p>
-                  <a href="./assets/watch-overview.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/watch-overview.webp" alt="Полный главный экран WatchB8 с подключённым устройством, показателями активности и навигацией" width="640" height="1237"></a>
-                </section>
-                <section class="case-section">
-                  <h3>Дневник сахара</h3>
-                  <p>Текущее показание, переключатели периода и линия замеров. Легенда обозначает данные сенсора, еду и инсулин.</p>
-                  <a href="./assets/watch-chart.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/watch-chart.webp" alt="Экран сахара с заполненным трёхчасовым графиком и демонстрационными показаниями" width="640" height="1012"></a>
-                </section>
-              </div>
+              <p>Приложение для часов и кольца B8. В разделе «Здоровье» собраны активность, подключённые устройства и дневник сахара.</p>
+              <p class="case-note">На скриншотах использованы демонстрационные данные.</p>
+              <section class="watch-carousel" aria-label="Галерея экранов WatchB8">
+                <div class="watch-controls">
+                  <button type="button" data-watch-step="-1" aria-label="Предыдущий экран">←</button>
+                  <span class="watch-count" aria-live="polite">1 из 5</span>
+                  <button type="button" data-watch-step="1" aria-label="Следующий экран">→</button>
+                </div>
+                <div class="watch-track" tabindex="0" aria-label="Экраны WatchB8. Для перелистывания используйте стрелки">
+                  <figure class="watch-slide">
+                    <a href="./assets/watch-overview.webp" target="_blank" rel="noopener noreferrer" aria-label="Открыть «Главный экран» в полном размере"><img src="./assets/watch-overview.webp" alt="Главный экран, демонстрационный скриншот WatchB8" width="640" height="1237" loading="lazy"></a>
+                    <figcaption><h3>Главный экран</h3><p>Подключённое устройство, карточки глюкозы и питания, кольца активности, пульс и кислород.</p></figcaption>
+                  </figure>
+                  <figure class="watch-slide">
+                    <a href="./assets/watch-chart.webp" target="_blank" rel="noopener noreferrer" aria-label="Открыть «Дневник сахара · 3 часа» в полном размере"><img src="./assets/watch-chart.webp" alt="Дневник сахара · 3 часа, демонстрационный скриншот WatchB8" width="640" height="1012" loading="lazy"></a>
+                    <figcaption><h3>Дневник сахара · 3 часа</h3><p>Текущее показание, кривая замеров и легенда для отметок сенсора, еды и инсулина.</p></figcaption>
+                  </figure>
+                  <figure class="watch-slide">
+                    <a href="./assets/watch-daily.webp" target="_blank" rel="noopener noreferrer" aria-label="Открыть «Дневник сахара · Сутки» в полном размере"><img src="./assets/watch-daily.webp" alt="Дневник сахара · Сутки, демонстрационный скриншот WatchB8" width="480" height="813" loading="lazy"></a>
+                    <figcaption><h3>Дневник сахара · Сутки</h3><p>Дневной график показывает изменение показаний в течение 24 часов.</p></figcaption>
+                  </figure>
+                  <figure class="watch-slide">
+                    <a href="./assets/watch-weekly.webp" target="_blank" rel="noopener noreferrer" aria-label="Открыть «Дневник сахара · Неделя» в полном размере"><img src="./assets/watch-weekly.webp" alt="Дневник сахара · Неделя, демонстрационный скриншот WatchB8" width="480" height="912" loading="lazy"></a>
+                    <figcaption><h3>Дневник сахара · Неделя</h3><p>Недельный график и сводка сенсора с долей показаний в целевом диапазоне.</p></figcaption>
+                  </figure>
+                  <figure class="watch-slide">
+                    <a href="./assets/watch-monthly.webp" target="_blank" rel="noopener noreferrer" aria-label="Открыть «Дневник сахара · Месяц» в полном размере"><img src="./assets/watch-monthly.webp" alt="Дневник сахара · Месяц, демонстрационный скриншот WatchB8" width="480" height="912" loading="lazy"></a>
+                    <figcaption><h3>Дневник сахара · Месяц</h3><p>Месячный график и итоговые показатели за выбранный период.</p></figcaption>
+                  </figure>
+                </div>
+              </section>
             </template>
           </article>
 
           <article data-kind="film">
             <button class="work-card" type="button" data-case>
-              <span class="work-media diptych"><img src="./assets/astana-2.webp" alt="" width="541" height="331" loading="lazy"><img src="./assets/astana-3.webp" alt="" width="541" height="331" loading="lazy"></span>
-              <span class="work-label"><strong>Астана, 5 июля</strong><small>Видео · Съёмка и монтаж</small></span>
+              <span class="work-media"><img src="./assets/astana-poster.webp" alt="" width="1280" height="720" loading="lazy"></span>
+              <span class="work-label"><strong>Астана</strong><small>Видео · Съёмка и монтаж</small></span>
               <span class="card-arrow" aria-hidden="true">↗</span>
             </button>
             <template>
-              <p>Дневные улицы, архитектура и вечерние огни в городской зарисовке на 32 секунды.</p>
-              <p class="case-credit">Съёмка и монтаж — Оксана Леонтьева</p>
-              <section class="case-section"><h3>Город днём и ночью</h3>
-                <div class="case-grid">
-                  <figure><img src="./assets/astana-2.webp" alt="Дневная Астана с высоты" width="541" height="331"><figcaption>Дневной план — улица и здания с высоты.</figcaption></figure>
-                  <figure><img src="./assets/astana-3.webp" alt="Огни Астаны ночью" width="541" height="331"><figcaption>Ночной план — огни города и тот же титр даты.</figcaption></figure>
-                </div>
-              </section>
-              <div class="case-links"><a class="button" href="https://www.instagram.com/_._.oksanaa._._/reel/DacnXZ3O5Qv/">Смотреть Reel</a></div>
+              <p>Городская зарисовка о том, как меняется Астана от дневных улиц до вечерних огней.</p>
+              <p class="case-credit">Автор съёмки и монтажа: Оксана Леонтьева</p>
+              <video class="case-video" controls playsinline preload="metadata" poster="./assets/astana-poster.webp" width="1280" height="720" aria-label="Городская зарисовка «Астана»">
+                <source src="./assets/astana.mp4" type="video/mp4">
+                <a href="./assets/astana.mp4">Открыть видео</a>
+              </video>
+              <div class="case-links"><a href="https://www.instagram.com/_._.oksanaa._._/reel/DacnXZ3O5Qv/">Открыть в Instagram</a></div>
             </template>
           </article>
 
@@ -166,7 +188,7 @@
             </button>
             <template>
               <p>ГИС-платформа для анализа аварийности в Северо-Казахстанской области.</p>
-              <p class="case-credit">Моя роль в команде — фронтенд и анализ данных.</p>
+              <p class="case-credit">В команде я занималась фронтендом и анализом данных.</p>
               <section class="case-section"><h3>Карта и обзорная панель</h3>
                 <p>На карте можно сменить представление и отфильтровать события. Обзорная панель нужна для сравнения периодов. На скриншотах учебные данные.</p>
                 <div class="case-grid">
@@ -177,88 +199,74 @@
             </template>
           </article>
 
-          <article data-kind="film">
-            <button class="work-card" type="button" data-case>
-              <span class="work-media"><img src="./assets/arcana-cover.webp" alt="" width="1280" height="720" loading="lazy"></span>
-              <span class="work-label"><strong>13 in Your Destiny Matrix?</strong><small>Видео · Обложка и графика</small></span>
-              <span class="card-arrow" aria-hidden="true">↗</span>
-            </button>
-            <template>
-              <p>Обложка и графика для объясняющего ролика Destiny Matrix Lab.</p>
-              <section class="case-section"><h3>От обложки к кадру</h3>
-                <div class="case-grid">
-                  <figure><img src="./assets/arcana-cover.webp" alt="Обложка с картой и числом 13" width="1280" height="720"><figcaption>На обложке крупная цифра 13 читается даже в маленьком превью.</figcaption></figure>
-                  <figure><img src="./assets/arcana-graphic.webp" alt="Кадр со схемой из ролика" width="640" height="360"><figcaption>В самом ролике цвет помогает найти нужный узел схемы.</figcaption></figure>
-                </div>
-              </section>
-              <div class="case-links"><a href="https://www.youtube.com/watch?v=jKuJX1-OuTQ">Ролик на YouTube</a><small>Для просмотра требуется вход.</small></div>
-            </template>
-          </article>
-
           <article data-kind="graphics" id="graphics">
             <button class="work-card" type="button" data-case>
-              <span class="work-media mockup elite"><img src="./assets/elite-wide.webp" alt="" width="312" height="220" loading="lazy"><img src="./assets/elite-vertical.webp" alt="" width="220" height="312" loading="lazy"></span>
-              <span class="work-label"><strong>Elite Startup Competition</strong><small>Графика · 9 вариантов афиш и баннеров</small></span>
+              <span class="work-media mockup banners"><img src="./assets/elite-gold-wide.webp" alt="" width="411" height="284" loading="lazy"><img src="./assets/sup-cover-hd.webp" alt="" width="1517" height="2000" loading="lazy"><img src="./assets/ku-ml.webp" alt="" width="317" height="628" loading="lazy"></span>
+              <span class="work-label"><strong>Баннеры</strong><small>Графика · Три серии</small></span>
               <span class="card-arrow" aria-hidden="true">↗</span>
             </button>
             <template>
-              <p>Серия афиш для конкурса стартапов. Одна тема — путь к вершине — развёрнута в разных стилях и форматах.</p>
-              <section class="case-section">
-                <h3>Гора и «2026»</h3>
-                <p>Светлая серия с крупными цифрами. Гору можно показать фотографией или оставить только контур.</p>
+              <nav class="banner-nav" aria-label="Серии баннеров">
+                <a href="#banners-elite">Elite Startup Competition</a>
+                <a href="#banners-sup">Прокат SUP-бордов</a>
+                <a href="#banners-ku">Kozybayev University</a>
+              </nav>
+              <section class="case-section" id="banners-elite">
+                <h3>Elite Startup Competition</h3>
+                <p>Девять вариантов афиш и баннеров для конкурса стартапов. Мотив вершины повторяется в фотографии, графике и линейной иллюстрации.</p>
+                <section class="banner-variation">
+                  <h4>Гора и «2026»</h4>
+                    <p>Светлая серия с крупными цифрами. Гору можно показать фотографией или оставить только контур.</p>
+                    <div class="case-grid three tall">
+                      <figure><a href="./assets/elite-wide.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/elite-wide.webp" alt="Горизонтальный плакат с горой и числом 2026" width="312" height="220"></a><figcaption>Горизонтальный формат</figcaption></figure>
+                      <figure><a href="./assets/elite-vertical.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/elite-vertical.webp" alt="Вертикальная версия плаката" width="220" height="312"></a><figcaption>Вертикальный формат</figcaption></figure>
+                      <figure><a href="./assets/elite-contour.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/elite-contour.webp" alt="Светлый плакат с контуром горы" width="329" height="232"></a><figcaption>Контурная версия</figcaption></figure>
+                    </div>
+                </section>
+                <section class="banner-variation">
+                  <h4>Фотографические варианты</h4>
+                    <p>В одном варианте направление задаёт дорога, в другом мягкий розовый слой поверх горного пейзажа.</p>
+                    <div class="case-grid">
+                      <figure><a href="./assets/elite-photo.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/elite-photo.webp" alt="Зелёный баннер с фотографией горной дороги" width="329" height="233"></a><figcaption>Дорога к вершине</figcaption></figure>
+                      <figure><a href="./assets/elite-pink.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/elite-pink.webp" alt="Розово-синий баннер с горным пейзажем" width="330" height="233"></a><figcaption>Розово-синий вариант</figcaption></figure>
+                    </div>
+                </section>
+                <section class="banner-variation">
+                  <h4>Геометрические вершины</h4>
+                    <p>В иллюстративной версии использованы угловатые формы, холодные оттенки и пиктограммы.</p>
+                    <div class="case-grid tall">
+                      <figure><a href="./assets/elite-geo-wide.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/elite-geo-wide.webp" alt="Горизонтальная версия с геометрическими вершинами" width="333" height="232"></a><figcaption>Баннер</figcaption></figure>
+                      <figure><a href="./assets/elite-geo-vertical.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/elite-geo-vertical.webp" alt="Вертикальный плакат с геометрическими вершинами" width="234" height="333"></a><figcaption>Вертикальная афиша</figcaption></figure>
+                    </div>
+                </section>
+                <section class="banner-variation">
+                  <h4>Золотая линия</h4>
+                    <p>Тёмная серия с тонким золотым рельефом и декоративной рамкой.</p>
+                    <div class="case-grid tall">
+                      <figure><a href="./assets/elite-gold-wide.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/elite-gold-wide.webp" alt="Горизонтальная тёмная афиша с золотым рельефом" width="411" height="284"></a><figcaption>Баннер</figcaption></figure>
+                      <figure><a href="./assets/elite-gold-vertical.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/elite-gold-vertical.webp" alt="Вертикальная тёмная афиша с золотым рельефом" width="285" height="404"></a><figcaption>Вертикальная афиша</figcaption></figure>
+                    </div>
+                </section>
+              </section>
+              <section class="case-section" id="banners-sup">
+                <h3>Прокат SUP-бордов</h3>
+                <p>Шесть карточек для соцсетей. Глубокий синий объединяет серию, а жёлтый выделяет цены и действия.</p>
                 <div class="case-grid three tall">
-                  <figure><a href="./assets/elite-wide.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/elite-wide.webp" alt="Горизонтальный плакат с горой и числом 2026" width="312" height="220"></a><figcaption>Горизонтальный формат</figcaption></figure>
-                  <figure><a href="./assets/elite-vertical.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/elite-vertical.webp" alt="Вертикальная версия плаката" width="220" height="312"></a><figcaption>Вертикальный формат</figcaption></figure>
-                  <figure><a href="./assets/elite-contour.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/elite-contour.webp" alt="Светлый плакат с контуром горы" width="329" height="232"></a><figcaption>Контурная версия</figcaption></figure>
+                  <figure><a href="./assets/sup-cover-hd.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/sup-cover-hd.webp" alt="Обложка проката SUP-бордов" width="1517" height="2000" loading="lazy"></a><figcaption>Обложка</figcaption></figure>
+                  <figure><a href="./assets/sup-prices-hd.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/sup-prices-hd.webp" alt="Карточка с ценами и комплектацией" width="1530" height="2000" loading="lazy"></a><figcaption>Цены и комплект</figcaption></figure>
+                  <figure><a href="./assets/sup-safety-hd.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/sup-safety-hd.webp" alt="Карточка о безопасности на воде" width="1530" height="2000" loading="lazy"></a><figcaption>Безопасность</figcaption></figure>
+                  <figure><a href="./assets/sup-care-hd.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/sup-care-hd.webp" alt="Карточка об уходе и возврате" width="1530" height="2000" loading="lazy"></a><figcaption>Уход и возврат</figcaption></figure>
+                  <figure><a href="./assets/sup-family-hd.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/sup-family-hd.webp" alt="Карточка о поездке с ребёнком" width="1530" height="2000" loading="lazy"></a><figcaption>Поездка с ребёнком</figcaption></figure>
+                  <figure><a href="./assets/sup-booking-hd.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/sup-booking-hd.webp" alt="Карточка о бронировании" width="1530" height="2000" loading="lazy"></a><figcaption>Бронирование</figcaption></figure>
                 </div>
               </section>
-              <section class="case-section">
-                <h3>Фотографические варианты</h3>
-                <p>В одном варианте направление задаёт дорога, в другом — мягкий розовый слой поверх горного пейзажа.</p>
-                <div class="case-grid">
-                  <figure><a href="./assets/elite-photo.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/elite-photo.webp" alt="Зелёный баннер с фотографией горной дороги" width="329" height="233"></a><figcaption>Дорога к вершине</figcaption></figure>
-                  <figure><a href="./assets/elite-pink.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/elite-pink.webp" alt="Розово-синий баннер с горным пейзажем" width="330" height="233"></a><figcaption>Розово-синий вариант</figcaption></figure>
-                </div>
-              </section>
-              <section class="case-section">
-                <h3>Геометрические вершины</h3>
-                <p>В иллюстративной версии использованы угловатые формы, холодные оттенки и пиктограммы.</p>
-                <div class="case-grid tall">
-                  <figure><a href="./assets/elite-geo-wide.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/elite-geo-wide.webp" alt="Горизонтальная версия с геометрическими вершинами" width="333" height="232"></a><figcaption>Баннер</figcaption></figure>
-                  <figure><a href="./assets/elite-geo-vertical.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/elite-geo-vertical.webp" alt="Вертикальный плакат с геометрическими вершинами" width="234" height="333"></a><figcaption>Вертикальная афиша</figcaption></figure>
-                </div>
-              </section>
-              <section class="case-section">
-                <h3>Золотая линия</h3>
-                <p>Тёмная серия с тонким золотым рельефом и декоративной рамкой.</p>
-                <div class="case-grid tall">
-                  <figure><a href="./assets/elite-gold-wide.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/elite-gold-wide.webp" alt="Горизонтальная тёмная афиша с золотым рельефом" width="411" height="284"></a><figcaption>Баннер</figcaption></figure>
-                  <figure><a href="./assets/elite-gold-vertical.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/elite-gold-vertical.webp" alt="Вертикальная тёмная афиша с золотым рельефом" width="285" height="404"></a><figcaption>Вертикальная афиша</figcaption></figure>
-                </div>
-              </section>
-            </template>
-          </article>
-
-          <article data-kind="interfaces">
-            <button class="work-card" type="button" data-case>
-              <span class="work-media mockup sana"><img src="./assets/ai-sana-home.webp" alt="" width="221" height="456" loading="lazy"><img src="./assets/ai-sana-news.webp" alt="" width="222" height="399" loading="lazy"></span>
-              <span class="work-label"><strong>AI SANA</strong><small>Интерфейс · Веб-макеты</small></span>
-              <span class="card-arrow" aria-hidden="true">↗</span>
-            </button>
-            <template>
-              <p>Серия университетских веб-макетов для AI SANA.</p>
-              <section class="case-section"><h3>Агенты и курсы</h3>
-                <p>На главной — знакомство с ИИ-агентами, на отдельной странице — список курсов.</p>
-                <div class="case-grid tall">
-                  <figure><a href="./assets/ai-sana-home.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/ai-sana-home.webp" alt="Главная AI SANA" width="221" height="456"></a><figcaption>Главная</figcaption></figure>
-                  <figure><a href="./assets/ai-sana-courses.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/ai-sana-courses.webp" alt="Список курсов AI SANA" width="220" height="456"></a><figcaption>Курсы</figcaption></figure>
-                </div>
-              </section>
-              <section class="case-section"><h3>Новости и статья</h3>
-                <p>Карточки дают быстрый обзор публикаций, а отдельный макет показывает, как устроена страница статьи.</p>
-                <div class="case-grid tall">
-                  <figure><a href="./assets/ai-sana-news.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/ai-sana-news.webp" alt="Сетка новостей AI SANA" width="222" height="399"></a><figcaption>Новости</figcaption></figure>
-                  <figure><a href="./assets/ai-sana-article.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/ai-sana-article.webp" alt="Страница статьи AI SANA" width="221" height="261"></a><figcaption>Статья</figcaption></figure>
+              <section class="case-section" id="banners-ku">
+                <h3>Kozybayev University</h3>
+                <p>Два варианта плаката для KU ML School и информационный макет о работе Центра искусственного интеллекта.</p>
+                <div class="case-grid three tall">
+                  <figure><a href="./assets/ku-ml.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/ku-ml.webp" alt="Первый вариант плаката KU ML School" width="317" height="628"></a><figcaption>KU ML School</figcaption></figure>
+                  <figure><a href="./assets/ku-ml-variant.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/ku-ml-variant.webp" alt="Второй вариант плаката KU ML School" width="316" height="616"></a><figcaption>Другой вариант школы</figcaption></figure>
+                  <figure><a href="./assets/ku-ai.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/ku-ai.webp" alt="Информационный плакат Центра искусственного интеллекта" width="317" height="707"></a><figcaption>Центр искусственного интеллекта</figcaption></figure>
                 </div>
               </section>
             </template>
@@ -273,49 +281,10 @@
             <template>
               <p>Командный проект KU-group для NASA Space Apps.</p>
               <section class="case-section"><h3>От месяца к карте</h3>
-                <p>В календаре можно сравнить месяцы и выбрать период, а на карте — посмотреть, где спутник зарегистрировал активность.</p>
+                <p>В календаре можно сравнить месяцы и выбрать период, а на карте посмотреть, где спутник зарегистрировал активность.</p>
                 <div class="case-grid">
                   <figure><a href="./assets/fire-calendar.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/fire-calendar.webp" alt="Календарь активности по годам и месяцам" width="662" height="434"></a><figcaption>Календарь наблюдений</figcaption></figure>
                   <figure><a href="./assets/fire-map.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/fire-map.webp" alt="Спутниковая карта Лос-Анджелеса" width="597" height="386"></a><figcaption>Спутниковая карта</figcaption></figure>
-                </div>
-              </section>
-            </template>
-          </article>
-
-          <article data-kind="graphics">
-            <button class="work-card" type="button" data-case>
-              <span class="work-media mockup sup"><img src="./assets/sup-cover.webp" alt="" width="133" height="173" loading="lazy"><img src="./assets/sup-prices.webp" alt="" width="131" height="172" loading="lazy"><img src="./assets/sup-safety.webp" alt="" width="130" height="173" loading="lazy"></span>
-              <span class="work-label"><strong>Прокат SUP-бордов</strong><small>Графика · Карточки для соцсетей</small></span>
-              <span class="card-arrow" aria-hidden="true">↗</span>
-            </button>
-            <template>
-              <p>Серия карточек для проката в единой синей палитре. Жёлтый акцент выделяет цены и действия.</p>
-              <section class="case-section"><h3>Пять карточек серии</h3>
-                <div class="case-grid three tall">
-                  <figure><a href="./assets/sup-cover.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/sup-cover.webp" alt="Обложка серии о прокате SUP-бордов" width="133" height="173"></a><figcaption>Обложка</figcaption></figure>
-                  <figure><a href="./assets/sup-prices.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/sup-prices.webp" alt="Карточка с тарифами проката" width="131" height="172"></a><figcaption>Тарифы</figcaption></figure>
-                  <figure><a href="./assets/sup-safety.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/sup-safety.webp" alt="Карточка о безопасности на воде" width="130" height="173"></a><figcaption>Безопасность</figcaption></figure>
-                  <figure><a href="./assets/sup-care.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/sup-care.webp" alt="Карточка об уходе за доской и её возврате" width="131" height="172"></a><figcaption>Уход и возврат</figcaption></figure>
-                  <figure><a href="./assets/sup-family.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/sup-family.webp" alt="Карточка о поездке с ребёнком" width="131" height="172"></a><figcaption>Поездка с ребёнком</figcaption></figure>
-                </div>
-              </section>
-            </template>
-          </article>
-
-          <article data-kind="graphics">
-            <button class="work-card" type="button" data-case>
-              <span class="work-media mockup university"><img src="./assets/ku-ml.webp" alt="" width="317" height="628" loading="lazy"><img src="./assets/ku-ai.webp" alt="" width="317" height="707" loading="lazy"></span>
-              <span class="work-label"><strong>Kozybayev University</strong><small>Графика · Информационные материалы</small></span>
-              <span class="card-arrow" aria-hidden="true">↗</span>
-            </button>
-            <template>
-              <p>Информационные материалы для KU ML School и Центра искусственного интеллекта.</p>
-              <section class="case-section"><h3>Школа и центр ИИ</h3>
-                <p>Два варианта плаката школы с иллюстрацией лампы и отдельный макет о работе центра.</p>
-                <div class="case-grid three tall">
-                  <figure><a href="./assets/ku-ml.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/ku-ml.webp" alt="Первый вариант плаката KU ML School" width="317" height="628"></a><figcaption>KU ML School</figcaption></figure>
-                  <figure><a href="./assets/ku-ml-variant.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/ku-ml-variant.webp" alt="Второй вариант плаката KU ML School" width="316" height="616"></a><figcaption>Другой вариант школы</figcaption></figure>
-                  <figure><a href="./assets/ku-ai.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/ku-ai.webp" alt="Информационный плакат Центра искусственного интеллекта" width="317" height="707"></a><figcaption>Центр искусственного интеллекта</figcaption></figure>
                 </div>
               </section>
             </template>
@@ -324,14 +293,23 @@
       </div>
     </section>
 
-    <section class="about wrap" id="about" aria-labelledby="about-title">
-      <div class="about-copy">
-        <h2 id="about-title">Обо <span>мне</span></h2>
-        <p>Я Оксана Леонтьева, разработчик ПО и бизнес-аналитик. Работаю с веб- и мобильными интерфейсами, веду YouTube-канал и пробую разные форматы видео, от городской зарисовки до ролика по раскадровке.</p>
-      </div>
-      <div class="about-frames" aria-hidden="true">
-        <img src="./assets/astana-3.webp" alt="" width="541" height="331" loading="lazy">
-        <img src="./assets/autumn.webp" alt="" width="862" height="500" loading="lazy">
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="wrap about-inner">
+        <div class="about-copy">
+          <h2 id="about-title">Обо <span>мне</span><span class="spark" aria-hidden="true"></span></h2>
+          <p>Я Оксана Леонтьева, разработчик ПО и бизнес-аналитик. Работаю с веб- и мобильными интерфейсами и люблю находить визуальную форму для сложной информации.</p>
+          <p>Снимаю и монтирую городские зарисовки, собираю раскадровки и экспериментирую с атмосферой и графикой для своего YouTube-канала.</p>
+          <a class="about-contact" href="#contacts">Связаться <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="about-frames" aria-hidden="true">
+          <div class="about-orbit"></div>
+          <span class="spark about-spark about-spark-one"></span>
+          <span class="spark about-spark about-spark-two"></span>
+          <span class="spark about-spark about-spark-three"></span>
+          <img src="./assets/astana-night.webp" alt="" width="961" height="599" loading="lazy">
+          <img src="./assets/autumn.webp" alt="" width="862" height="500" loading="lazy">
+          <span class="butterfly about-butterfly"></span>
+        </div>
       </div>
     </section>
   </main>

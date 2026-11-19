@@ -58,6 +58,45 @@ const caseTitle = document.querySelector('#case-title');
 const caseCategory = document.querySelector('#case-category');
 const caseDetails = document.querySelector('#case-details');
 
+function setupWatchCarousel(carousel) {
+  const track = carousel.querySelector('.watch-track');
+  const count = carousel.querySelector('.watch-count');
+  const slides = [...track.querySelectorAll('.watch-slide')];
+  const current = () => Math.round(track.scrollLeft / track.clientWidth);
+
+  function move(step) {
+    const index = (current() + step + slides.length) % slides.length;
+    track.scrollTo({ left: index * track.clientWidth });
+  }
+
+  for (const button of carousel.querySelectorAll('[data-watch-step]')) {
+    button.addEventListener('click', () => move(Number(button.dataset.watchStep)));
+  }
+
+  track.addEventListener('keydown', (event) => {
+    if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+    event.preventDefault();
+    move(event.key === 'ArrowLeft' ? -1 : 1);
+  });
+
+  track.addEventListener('scroll', () => {
+    const label = `${current() + 1} из ${slides.length}`;
+    if (count.textContent !== label) count.textContent = label;
+  }, { passive: true });
+}
+
+caseDetails.addEventListener('click', (event) => {
+  const link = event.target.closest('.banner-nav a');
+  if (!link || event.metaKey || event.ctrlKey || event.altKey || event.shiftKey) return;
+
+  const heading = caseDetails.querySelector(link.hash).querySelector('h3');
+  event.preventDefault();
+  heading.tabIndex = -1;
+  heading.focus({ preventScroll: true });
+  const offset = heading.getBoundingClientRect().top - caseScroll.getBoundingClientRect().top;
+  caseScroll.scrollTop += offset - 48;
+});
+
 gallery.addEventListener('click', (event) => {
   const trigger = event.target.closest('[data-case]');
   if (!trigger) return;
@@ -67,6 +106,8 @@ gallery.addEventListener('click', (event) => {
   caseDetails.replaceChildren(trigger.closest('article').querySelector('template').content.cloneNode(true));
   dialog.showModal();
   caseScroll.scrollTop = 0;
+  const watchCarousel = caseDetails.querySelector('.watch-carousel');
+  if (watchCarousel) setupWatchCarousel(watchCarousel);
 });
 
 dialog.addEventListener('click', (event) => {
