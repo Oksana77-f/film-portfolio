@@ -333,6 +333,15 @@ p { text-wrap: pretty; }
 .work-media img { height: 100%; object-fit: cover; }
 .work-media.diptych { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: #37213b; }
 .work-media.diptych img { min-width: 0; }
+.work-media.art-cover {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr .85fr;
+  gap: 2px;
+  background: #26182e;
+}
+.art-cover img { min-width: 0; min-height: 0; }
+.art-cover img:first-child { object-position: 52% 70%; }
+.art-cover img:last-child { object-position: 46% 39%; }
 .work-media.screen img { object-position: 50% 38%; }
 .work-media.mockup {
   display: flex;
@@ -599,6 +608,10 @@ p { text-wrap: pretty; }
   border-radius: 12px;
   background: #09070b;
 }
+.artwork-grid figure > a { display: block; }
+.case-grid.artwork-grid img { max-height: 365px; }
+.watch-more summary { cursor: pointer; color: var(--text); font-weight: 650; }
+.watch-more summary:hover { color: var(--amber); }
 .banner-nav { display: flex; flex-wrap: wrap; gap: 7px; }
 .banner-nav a {
   display: inline-block;

@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b0810">
-  <meta name="description" content="Портфолио Оксаны Леонтьевой. Видео, интерфейсы и графический дизайн.">
+  <meta name="description" content="Портфолио Оксаны Леонтьевой. Видео, интерфейсы, графика и живопись.">
   <title>Портфолио Оксаны Леонтьевой</title>
   <link rel="icon" href="./assets/monogram.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css?v=case-gallery">
+  <link rel="stylesheet" href="./styles.css?v=art-and-watch">
   <script src="./gallery.js?v=case-gallery" defer></script>
 </head>
 <body>
@@ -58,6 +58,7 @@
           <a href="#film" data-filter="film"><span aria-hidden="true">▷</span> Видео</a>
           <a href="#interfaces" data-filter="interfaces"><span aria-hidden="true">▣</span> Интерфейсы</a>
           <a href="#graphics" data-filter="graphics"><span aria-hidden="true">◇</span> Графика</a>
+          <a href="#art" data-filter="art"><span aria-hidden="true">✧</span> Ручное творчество</a>
         </nav>
         <nav class="rail-nav rail-links" aria-label="Информация об авторе">
           <a href="#about"><span aria-hidden="true">✦</span> Обо мне</a>
@@ -72,6 +73,7 @@
             <button type="button" data-filter="film" aria-pressed="false">Видео</button>
             <button type="button" data-filter="interfaces" aria-pressed="false">Интерфейсы</button>
             <button type="button" data-filter="graphics" aria-pressed="false">Графика</button>
+            <button type="button" data-filter="art" aria-pressed="false">Ручное творчество</button>
           </div>
         </div>
         <p class="sr-only" id="gallery-status" aria-live="polite"></p>
@@ -124,42 +126,71 @@
 
           <article data-kind="interfaces" id="interfaces">
             <button class="work-card" type="button" data-case>
-              <span class="work-media mockup watch"><img src="./assets/watch-overview.webp" alt="" width="640" height="1237" loading="lazy"><img src="./assets/watch-chart.webp" alt="" width="640" height="1012" loading="lazy"></span>
-              <span class="work-label"><strong>WatchB8</strong><small>Смарт-часы · Дневник сахара</small></span>
+              <span class="work-media mockup watch"><img src="./assets/watch-activity.webp" alt="" width="591" height="1150" loading="lazy"><img src="./assets/watch-sleep.webp" alt="" width="591" height="1150" loading="lazy"></span>
+              <span class="work-label"><strong>WatchB8</strong><small>Смарт-часы · Активность, сон и здоровье</small></span>
               <span class="card-arrow" aria-hidden="true">↗</span>
             </button>
             <template>
-              <p>Приложение для часов и кольца B8. В разделе «Здоровье» собраны активность, подключённые устройства и дневник сахара.</p>
-              <p class="case-note">На скриншотах использованы демонстрационные данные.</p>
+              <p>WatchB8 связывает часы и кольцо B8 с приложением. В нём можно следить за активностью, сном и пульсом, планировать дела и вести учёт расходов.</p>
+              <p class="case-note">На главной, в дневнике сахара и в разделе «Финансы» показаны демонстрационные данные.</p>
               <section class="watch-carousel" aria-label="Галерея экранов WatchB8">
                 <div class="watch-controls">
                   <button type="button" data-watch-step="-1" aria-label="Предыдущий экран">←</button>
-                  <span class="watch-count" aria-live="polite">1 из 5</span>
+                  <span class="watch-count" aria-live="polite">1 из 8</span>
                   <button type="button" data-watch-step="1" aria-label="Следующий экран">→</button>
                 </div>
                 <div class="watch-track" tabindex="0" aria-label="Экраны WatchB8. Для перелистывания используйте стрелки">
                   <figure class="watch-slide">
-                    <a href="./assets/watch-overview.webp" target="_blank" rel="noopener noreferrer" aria-label="Открыть «Главный экран» в полном размере"><img src="./assets/watch-overview.webp" alt="Главный экран, демонстрационный скриншот WatchB8" width="640" height="1237" loading="lazy"></a>
-                    <figcaption><h3>Главный экран</h3><p>Подключённое устройство, карточки глюкозы и питания, кольца активности, пульс и кислород.</p></figcaption>
+                    <a href="./assets/watch-overview.webp" target="_blank" rel="noopener noreferrer" aria-label="Увеличить «Главная»"><img src="./assets/watch-overview.webp" alt="Главная, экран WatchB8" width="640" height="1237" loading="lazy"></a>
+                    <figcaption><h3>Главная</h3><p>Подключённое устройство, активность и здоровье за день.</p></figcaption>
                   </figure>
                   <figure class="watch-slide">
-                    <a href="./assets/watch-chart.webp" target="_blank" rel="noopener noreferrer" aria-label="Открыть «Дневник сахара · 3 часа» в полном размере"><img src="./assets/watch-chart.webp" alt="Дневник сахара · 3 часа, демонстрационный скриншот WatchB8" width="640" height="1012" loading="lazy"></a>
-                    <figcaption><h3>Дневник сахара · 3 часа</h3><p>Текущее показание, кривая замеров и легенда для отметок сенсора, еды и инсулина.</p></figcaption>
+                    <a href="./assets/watch-activity.webp" target="_blank" rel="noopener noreferrer" aria-label="Увеличить «Активность»"><img src="./assets/watch-activity.webp" alt="Активность, экран WatchB8" width="591" height="1150" loading="lazy"></a>
+                    <figcaption><h3>Активность</h3><p>Кольца показывают шаги, дистанцию и калории. Ниже видны карточки пульса, кислорода, стресса и заряда часов.</p></figcaption>
                   </figure>
                   <figure class="watch-slide">
-                    <a href="./assets/watch-daily.webp" target="_blank" rel="noopener noreferrer" aria-label="Открыть «Дневник сахара · Сутки» в полном размере"><img src="./assets/watch-daily.webp" alt="Дневник сахара · Сутки, демонстрационный скриншот WatchB8" width="480" height="813" loading="lazy"></a>
-                    <figcaption><h3>Дневник сахара · Сутки</h3><p>Дневной график показывает изменение показаний в течение 24 часов.</p></figcaption>
+                    <a href="./assets/watch-sleep.webp" target="_blank" rel="noopener noreferrer" aria-label="Увеличить «Сон»"><img src="./assets/watch-sleep.webp" alt="Сон, экран WatchB8" width="591" height="1150" loading="lazy"></a>
+                    <figcaption><h3>Сон</h3><p>Гипнограмма показывает, когда менялись фазы сна. Кольцевая диаграмма показывает, сколько времени заняла каждая фаза.</p></figcaption>
                   </figure>
                   <figure class="watch-slide">
-                    <a href="./assets/watch-weekly.webp" target="_blank" rel="noopener noreferrer" aria-label="Открыть «Дневник сахара · Неделя» в полном размере"><img src="./assets/watch-weekly.webp" alt="Дневник сахара · Неделя, демонстрационный скриншот WatchB8" width="480" height="912" loading="lazy"></a>
-                    <figcaption><h3>Дневник сахара · Неделя</h3><p>Недельный график и сводка сенсора с долей показаний в целевом диапазоне.</p></figcaption>
+                    <a href="./assets/watch-pulse.webp" target="_blank" rel="noopener noreferrer" aria-label="Увеличить «Пульс»"><img src="./assets/watch-pulse.webp" alt="Пульс, экран WatchB8" width="591" height="1150" loading="lazy"></a>
+                    <figcaption><h3>Пульс</h3><p>Текущее показание, график за день, пульс в покое и распределение замеров.</p></figcaption>
                   </figure>
                   <figure class="watch-slide">
-                    <a href="./assets/watch-monthly.webp" target="_blank" rel="noopener noreferrer" aria-label="Открыть «Дневник сахара · Месяц» в полном размере"><img src="./assets/watch-monthly.webp" alt="Дневник сахара · Месяц, демонстрационный скриншот WatchB8" width="480" height="912" loading="lazy"></a>
-                    <figcaption><h3>Дневник сахара · Месяц</h3><p>Месячный график и итоговые показатели за выбранный период.</p></figcaption>
+                    <a href="./assets/watch-wellness.webp" target="_blank" rel="noopener noreferrer" aria-label="Увеличить «Вода и сон»"><img src="./assets/watch-wellness.webp" alt="Вода и сон, экран WatchB8" width="591" height="707" loading="lazy"></a>
+                    <figcaption><h3>Вода и сон</h3><p>Фрагменты главной вкладки «Здоровье». Здесь можно отметить выпитую воду и посмотреть сводку за прошлую ночь.</p></figcaption>
+                  </figure>
+                  <figure class="watch-slide">
+                    <a href="./assets/watch-tasks.webp" target="_blank" rel="noopener noreferrer" aria-label="Увеличить «Дела»"><img src="./assets/watch-tasks.webp" alt="Дела, экран WatchB8" width="640" height="1321" loading="lazy"></a>
+                    <figcaption><h3>Дела</h3><p>План на день, расписание, отметки о самочувствии и список сфер, в которых можно вести проекты.</p></figcaption>
+                  </figure>
+                  <figure class="watch-slide">
+                    <a href="./assets/watch-finances.webp" target="_blank" rel="noopener noreferrer" aria-label="Увеличить «Финансы»"><img src="./assets/watch-finances.webp" alt="Финансы, экран WatchB8" width="640" height="1321" loading="lazy"></a>
+                    <figcaption><h3>Финансы</h3><p>Доходы и расходы за месяц, категории трат и добавление операций вручную.</p></figcaption>
+                  </figure>
+                  <figure class="watch-slide">
+                    <a href="./assets/watch-chart.webp" target="_blank" rel="noopener noreferrer" aria-label="Увеличить «Дневник сахара»"><img src="./assets/watch-chart.webp" alt="Дневник сахара, экран WatchB8" width="640" height="1012" loading="lazy"></a>
+                    <figcaption><h3>Дневник сахара</h3><p>Трёхчасовой график замеров с легендой для отметок сенсора, еды и инсулина.</p></figcaption>
                   </figure>
                 </div>
               </section>
+              <details class="case-section watch-more">
+                <summary>Другие периоды дневника сахара</summary>
+                <div class="case-grid three tall">
+                  <figure>
+                    <a href="./assets/watch-daily.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/watch-daily.webp" alt="Дневник сахара · Сутки" width="480" height="813" loading="lazy"></a>
+                    <figcaption>Сутки</figcaption>
+                  </figure>
+                  <figure>
+                    <a href="./assets/watch-weekly.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/watch-weekly.webp" alt="Дневник сахара · Неделя" width="480" height="912" loading="lazy"></a>
+                    <figcaption>Неделя</figcaption>
+                  </figure>
+                  <figure>
+                    <a href="./assets/watch-monthly.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/watch-monthly.webp" alt="Дневник сахара · Месяц" width="480" height="912" loading="lazy"></a>
+                    <figcaption>Месяц</figcaption>
+                  </figure>
+                </div>
+              </details>
             </template>
           </article>
 
@@ -194,6 +225,63 @@
                 <div class="case-grid">
                   <figure><a href="./assets/dtp-map.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/dtp-map.webp" alt="Карта происшествий и фильтры" width="1600" height="1000"></a><figcaption>Карта происшествий</figcaption></figure>
                   <figure><a href="./assets/dtp-dashboard.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/dtp-dashboard.webp" alt="Обзорная панель для сравнения показателей" width="1600" height="1000"></a><figcaption>Обзорная панель</figcaption></figure>
+                </div>
+              </section>
+            </template>
+          </article>
+
+
+          <article data-kind="art" id="art">
+            <button class="work-card" type="button" data-case>
+              <span class="work-media art-cover"><img src="./assets/art-train.webp" alt="" width="960" height="1204" loading="lazy"><img src="./assets/art-butterflies.webp" alt="" width="698" height="843" loading="lazy"><img src="./assets/art-blue-portrait.webp" alt="" width="627" height="832" loading="lazy"></span>
+              <span class="work-label"><strong>Ручное творчество</strong><small>Живопись · Девять работ</small></span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <template>
+              <section class="case-section">
+                <h3>Пейзажи и натюрморт</h3>
+                <div class="case-grid three tall artwork-grid">
+                  <figure>
+                    <a href="./assets/art-train.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/art-train.webp" alt="Оранжевый поезд и его отражение под облаками" width="960" height="1204" loading="lazy"></a>
+                    <figcaption>Поезд у воды</figcaption>
+                  </figure>
+                  <figure>
+                    <a href="./assets/art-waves.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/art-waves.webp" alt="Морские волны с пеной под тёмным небом" width="635" height="848" loading="lazy"></a>
+                    <figcaption>Море в шторм</figcaption>
+                  </figure>
+                  <figure>
+                    <a href="./assets/art-coast.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/art-coast.webp" alt="Скальная арка на побережье и камни на переднем плане" width="922" height="1280" loading="lazy"></a>
+                    <figcaption>Скала у моря</figcaption>
+                  </figure>
+                  <figure>
+                    <a href="./assets/art-still-life.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/art-still-life.webp" alt="Самовар, чайник и фрукты на цветной ткани" width="848" height="613" loading="lazy"></a>
+                    <figcaption>Натюрморт с самоваром</figcaption>
+                  </figure>
+                </div>
+              </section>
+              <section class="case-section">
+                <h3>Портреты и фантазийные сюжеты</h3>
+                <div class="case-grid three tall artwork-grid">
+                  <figure>
+                    <a href="./assets/art-butterflies.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/art-butterflies.webp" alt="Рука на груди и золотые бабочки в тёплом свете" width="698" height="843" loading="lazy"></a>
+                    <figcaption>Золотые бабочки</figcaption>
+                  </figure>
+                  <figure>
+                    <a href="./assets/art-blue-portrait.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/art-blue-portrait.webp" alt="Синий портрет с золотыми линиями и белыми цветами" width="627" height="832" loading="lazy"></a>
+                    <figcaption>Портрет в синем</figcaption>
+                  </figure>
+                  <figure>
+                    <a href="./assets/art-flower-city.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/art-flower-city.webp" alt="Красные цветы между синими зданиями и две фигуры" width="677" height="842" loading="lazy"></a>
+                    <figcaption>Цветы в городе</figcaption>
+                  </figure>
+                  <figure>
+                    <a href="./assets/art-underwater.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/art-underwater.webp" alt="Лицо под водой с пузырьками и бликами на коже" width="677" height="852" loading="lazy"></a>
+                    <figcaption>Под водой</figcaption>
+                  </figure>
+                  <figure>
+                    <a href="./assets/art-floral-eye.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/art-floral-eye.webp" alt="Синие цветы внутри глаза и две золотые дорожки" width="570" height="800" loading="lazy"></a>
+                    <figcaption>Глаз с цветами</figcaption>
+                  </figure>
                 </div>
               </section>
             </template>
@@ -298,7 +386,7 @@
         <div class="about-copy">
           <h2 id="about-title">Обо <span>мне</span><span class="spark" aria-hidden="true"></span></h2>
           <p>Я Оксана Леонтьева, разработчик ПО и бизнес-аналитик. Работаю с веб- и мобильными интерфейсами и люблю находить визуальную форму для сложной информации.</p>
-          <p>Снимаю и монтирую городские зарисовки, собираю раскадровки и экспериментирую с атмосферой и графикой для своего YouTube-канала.</p>
+          <p>Снимаю и монтирую городские зарисовки, пишу картины и экспериментирую с атмосферой и графикой для своего YouTube-канала.</p>
           <a class="about-contact" href="#contacts">Связаться <span aria-hidden="true">↗</span></a>
         </div>
         <div class="about-frames" aria-hidden="true">
@@ -306,7 +394,7 @@
           <span class="spark about-spark about-spark-one"></span>
           <span class="spark about-spark about-spark-two"></span>
           <span class="spark about-spark about-spark-three"></span>
-          <img src="./assets/astana-night.webp" alt="" width="961" height="599" loading="lazy">
+          <img src="./assets/art-butterflies.webp" alt="" width="698" height="843" loading="lazy">
           <img src="./assets/autumn.webp" alt="" width="862" height="500" loading="lazy">
           <span class="butterfly about-butterfly"></span>
         </div>
