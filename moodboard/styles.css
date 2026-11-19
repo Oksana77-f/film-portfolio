@@ -1,0 +1,146 @@
+:root {
+  color-scheme: dark;
+  --ink: #111413;
+  --paper: #f1e7d9;
+  --rose: #ef776a;
+  --muted: #c8bdb1;
+  --gutter: clamp(4px, .6vw, 9px);
+  background: var(--ink);
+  color: var(--paper);
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+.sheet {
+  max-width: 1552px;
+  margin: 0 auto;
+  padding: clamp(25px, 3.3vw, 50px) clamp(16px, 4vw, 60px) 22px;
+}
+
+.heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: clamp(19px, 2.3vw, 34px);
+}
+
+.byline {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: .74rem;
+  font-weight: 620;
+  letter-spacing: .115em;
+  text-transform: uppercase;
+}
+
+.byline span {
+  padding: 0 .4em;
+  color: var(--rose);
+}
+
+h1 {
+  margin: 0;
+  font: normal clamp(3rem, 6.6vw, 6.4rem)/.99 Georgia, serif;
+  letter-spacing: -.08em;
+}
+
+h1 em {
+  color: var(--rose);
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+.theme {
+  margin: 0 0 4px;
+  padding: 0 0 0 14px;
+  border-left: 1px solid #d0695b;
+  color: var(--muted);
+  font-size: clamp(.85rem, 1.27vw, 1.06rem);
+  line-height: 1.52;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: 1.19fr 1fr 1.03fr 1.04fr;
+  grid-template-rows: repeat(20, minmax(0, 1fr));
+  gap: var(--gutter);
+  aspect-ratio: 1.77;
+}
+
+.board a {
+  position: relative;
+  display: block;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background: #171a17;
+}
+
+.board img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.field { grid-area: 1 / 1 / -1 / 2; }
+.sky { grid-area: 1 / 2 / 12 / 3; }
+.statue { grid-area: 1 / 3 / 14 / 4; }
+.butterflies { grid-area: 1 / 4 / 10 / 5; }
+.ferns { grid-area: 12 / 2 / -1 / 3; }
+.cat { grid-area: 14 / 3 / -1 / 4; }
+.roses { grid-area: 10 / 4 / 13 / 5; }
+.orange-cats { grid-area: 13 / 4 / -1 / 5; }
+
+.field img { object-position: 51% 63%; }
+.sky img { object-position: 56% 45%; }
+.statue img { object-position: 51% 43%; }
+.board .butterflies { background: #e9d2b7; }
+.butterflies img { object-fit: contain; }
+.ferns img { object-position: 50% 55%; }
+.cat img { object-position: 54% 37%; }
+.roses img { object-position: 64% 48%; }
+.orange-cats img { object-position: 52% 28%; }
+
+.board a:focus-visible, .links a:focus-visible {
+  outline: 2px solid var(--paper);
+  outline-offset: 3px;
+  z-index: 1;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+  font-size: .83rem;
+}
+
+.links a {
+  color: var(--muted);
+  text-underline-offset: .22em;
+}
+.links a:hover { color: var(--paper); }
+
+@media (max-width: 740px) {
+  .heading { display: block; }
+  .theme { margin-top: 14px; }
+  .desktop-break { display: none; }
+  .board {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(8, clamp(76px, 24vw, 155px));
+    aspect-ratio: auto;
+  }
+  .field { grid-area: 1 / 1 / 4 / 2; }
+  .sky { grid-area: 1 / 2 / 3 / 3; }
+  .statue { grid-area: 4 / 1 / 7 / 2; }
+  .butterflies { grid-area: 5 / 2 / 7 / 3; }
+  .ferns { grid-area: 3 / 2 / 5 / 3; }
+  .cat { grid-area: 8 / 1 / -1 / 2; }
+  .roses { grid-area: 7 / 1 / 8 / 2; }
+  .orange-cats { grid-area: 7 / 2 / -1 / 3; }
+}
