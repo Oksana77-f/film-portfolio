@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#220b10">
+  <meta name="theme-color" content="#0b0810">
   <meta name="description" content="Портфолио Оксаны Леонтьевой. Видео, интерфейсы и графический дизайн.">
   <title>Оксана Леонтьева — портфолио</title>
   <link rel="icon" href="./assets/monogram.svg" type="image/svg+xml">
@@ -11,210 +11,250 @@
   <script src="./gallery.js" defer></script>
 </head>
 <body>
-  <a class="skip" href="#work">Перейти к работам</a>
-  <header class="top" id="top">
+  <a class="skip" href="#gallery">Перейти к работам</a>
+  <header class="site-header" id="top">
     <div class="wrap top-inner">
-      <a class="mark" href="#top" aria-label="Оксана Леонтьева, начало страницы">Оксана Леонтьева</a>
-      <nav aria-label="Разделы портфолио">
-        <a href="#film">Видео</a>
-        <a href="#interfaces">Интерфейсы</a>
-        <a href="#graphics">Графика</a>
+      <a class="brand" href="#top"><span class="spark" aria-hidden="true"></span>Оксана Леонтьева</a>
+      <nav class="primary-nav" aria-label="Главная навигация">
+        <a class="nav-active" href="#gallery" data-filter="all">Портфолио</a>
         <a href="#about">Обо мне</a>
+        <a href="#contacts">Контакты</a>
       </nav>
+      <a class="resume-link" href="./resume.pdf" download>Скачать резюме <span aria-hidden="true">↓</span></a>
     </div>
   </header>
 
   <main id="work">
-    <section class="cover" aria-labelledby="name">
-      <div class="hero wrap">
-        <p class="cover-title" aria-hidden="true">Портфолио</p>
-        <figure class="portrait">
-          <img src="./assets/portrait.webp" alt="Портрет Оксаны Леонтьевой" width="339" height="429" fetchpriority="high">
+    <section class="hero" aria-labelledby="hero-name">
+      <div class="wrap hero-inner">
+        <figure class="hero-art">
+          <img src="./assets/portrait.webp" alt="Оксана Леонтьева в фиолетово-оранжевом свете" width="640" height="800" fetchpriority="high">
         </figure>
+        <span class="hero-orbit" aria-hidden="true"></span>
+        <span class="spark hero-spark spark-one" aria-hidden="true"></span>
+        <span class="spark hero-spark spark-two" aria-hidden="true"></span>
+        <span class="spark hero-spark spark-three" aria-hidden="true"></span>
         <div class="hero-copy">
-          <h1 id="name">Оксана<br>Леонтьева</h1>
-          <a class="button" href="#film">Смотреть работы</a>
+          <p class="eyebrow">Портфолио</p>
+          <h1 id="hero-name">Привет!<br>Я — <span>Оксана</span></h1>
+          <p class="hero-line">Снимаю и монтирую видео, работаю с графикой и интерфейсами.</p>
+          <a class="button" href="#gallery" data-filter="all">Смотреть работы <span aria-hidden="true">↘</span></a>
         </div>
-        <p class="hero-line">Видео<br>Интерфейсы<br>Графика</p>
       </div>
     </section>
 
-    <section class="film section" id="film" aria-labelledby="film-title">
-      <div class="wrap">
-        <div class="section-intro">
-          <h2 id="film-title">Видео</h2>
-          <p>Атмосферные ролики на YouTube, авторская съёмка и монтаж.</p>
-        </div>
-        <article class="feature">
-          <a class="feature-image" href="https://www.youtube.com/watch?v=FMcNEyLBBxY" aria-label="Смотреть Autumn relax на YouTube">
-            <img src="./assets/autumn.webp" alt="Ночное кафе: тёплые лампы и синие огни города за окнами" width="862" height="500" loading="lazy">
-            <span class="play" aria-hidden="true"></span>
-          </a>
-          <div class="feature-copy">
-            <p class="eyebrow">Destiny Matrix Lab / YouTube</p>
-            <h3>Autumn relax</h3>
-            <p>Ночное кафе в тёплом свете. На Destiny Matrix Lab я публикую атмосферные и объясняющие видео, в работе над которыми использую Claude.</p>
-            <a class="text-link" href="https://www.youtube.com/@DestinyMatrixLab">Открыть канал</a>
+    <section class="gallery wrap" id="gallery" aria-labelledby="gallery-title">
+      <aside class="rail" aria-label="Категории работ">
+        <p class="rail-title"><span class="spark" aria-hidden="true"></span>Категории</p>
+        <nav class="rail-nav" aria-label="Фильтры работ">
+          <a href="#gallery" data-filter="all" aria-current="true"><span aria-hidden="true">▦</span> Все работы</a>
+          <a href="#film" data-filter="film"><span aria-hidden="true">▷</span> Видео</a>
+          <a href="#interfaces" data-filter="interfaces"><span aria-hidden="true">▣</span> Интерфейсы</a>
+          <a href="#graphics" data-filter="graphics"><span aria-hidden="true">◇</span> Графика</a>
+        </nav>
+        <nav class="rail-nav rail-links" aria-label="Информация об авторе">
+          <a href="#about"><span aria-hidden="true">✦</span> Обо мне</a>
+          <a href="#contacts"><span aria-hidden="true">✉</span> Контакты</a>
+        </nav>
+      </aside>
+      <div class="gallery-main">
+        <div class="gallery-head">
+          <h2 id="gallery-title">Галерея работ</h2>
+          <div class="chips" aria-label="Фильтры галереи">
+            <button type="button" data-filter="all" aria-pressed="true">Все</button>
+            <button type="button" data-filter="film" aria-pressed="false">Видео</button>
+            <button type="button" data-filter="interfaces" aria-pressed="false">Интерфейсы</button>
+            <button type="button" data-filter="graphics" aria-pressed="false">Графика</button>
           </div>
-        </article>
-
-        <div class="video-grid">
-          <article>
-            <a class="video-frame astana" href="https://www.instagram.com/_._.oksanaa._._/reel/DacnXZ3O5Qv/" aria-label="Смотреть Астану на Instagram">
-              <img src="./assets/astana-2.webp" alt="Астана днём, вид на улицу с высоты" width="541" height="331" loading="lazy">
-              <img src="./assets/astana-3.webp" alt="Огни Астаны ночью" width="541" height="331" loading="lazy">
-              <span class="play" aria-hidden="true"></span>
-            </a>
-            <div class="video-caption">
-              <div><p class="eyebrow">Instagram Reel / 32 сек.</p><h3>Астана, 5 июля</h3></div>
-              <a class="text-link" href="https://www.instagram.com/_._.oksanaa._._/reel/DacnXZ3O5Qv/">Смотреть Reel</a>
-            </div>
-            <p class="note">Дневные улицы, архитектура и вечерние огни в короткой городской зарисовке.</p>
-            <p class="work-credit">Съёмка и монтаж — Оксана Леонтьева</p>
+        </div>
+        <p class="sr-only" id="gallery-status" aria-live="polite"></p>
+        <div class="work-grid">
+          <article data-kind="film" id="film">
+            <button class="work-card" type="button" data-case>
+              <span class="work-media"><img src="./assets/autumn.webp" alt="" width="862" height="500" loading="lazy"></span>
+              <span class="work-label"><strong>Autumn relax</strong><small>Видео · Destiny Matrix Lab</small></span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <template>
+              <p>Вечернее кафе в тёплом свете на фоне холодного города. На своём канале Destiny Matrix Lab я выпускаю атмосферные и объясняющие ролики, в работе над которыми использую Claude.</p>
+              <img class="case-cover" src="./assets/autumn.webp" alt="Кадр из ролика: ночное кафе и огни города" width="862" height="500">
+              <div class="case-links"><a class="button" href="https://www.youtube.com/watch?v=FMcNEyLBBxY">Смотреть ролик</a><a href="https://www.youtube.com/@DestinyMatrixLab">Открыть канал</a></div>
+            </template>
           </article>
-          <article>
-            <a class="video-frame" href="./assets/arcana-cover.webp" data-zoom aria-label="Увеличить обложку 13 in Your Destiny Matrix?">
-              <img src="./assets/arcana-cover.webp" alt="Обложка YouTube с картой и крупным числом 13" width="1280" height="720" loading="lazy">
-            </a>
-            <div class="video-caption">
-              <div><p class="eyebrow">Destiny Matrix Lab / YouTube</p><h3>13 in Your Destiny Matrix?</h3></div>
-              <a class="text-link" href="./assets/arcana-graphic.webp" data-zoom aria-label="Увеличить схему из ролика">Кадр из видео</a>
-            </div>
-            <p class="note">Обложка и графика ролика. Цветовые акценты помогают выделить нужный узел схемы.</p>
+
+          <article data-kind="interfaces" id="interfaces">
+            <button class="work-card" type="button" data-case>
+              <span class="work-media mockup watch"><img src="./assets/watch-overview.webp" alt="" width="640" height="683" loading="lazy"><img src="./assets/watch-chart.webp" alt="" width="640" height="908" loading="lazy"></span>
+              <span class="work-label"><strong>WatchB8</strong><small>Интерфейс · Приложение для часов</small></span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <template>
+              <p>Обзор группирует показатели рядом с активностью. На отдельном экране можно переключать период истории измерений. Персональные показания на скриншотах скрыты.</p>
+              <div class="case-grid tall">
+                <figure><a href="./assets/watch-overview.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/watch-overview.webp" alt="Обзор в WatchB8 со скрытыми показаниями" width="640" height="683"></a><figcaption>Обзор</figcaption></figure>
+                <figure><a href="./assets/watch-chart.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/watch-chart.webp" alt="Экран истории измерений в WatchB8" width="640" height="908"></a><figcaption>История измерений</figcaption></figure>
+              </div>
+            </template>
+          </article>
+
+          <article data-kind="film">
+            <button class="work-card" type="button" data-case>
+              <span class="work-media diptych"><img src="./assets/astana-2.webp" alt="" width="541" height="331" loading="lazy"><img src="./assets/astana-3.webp" alt="" width="541" height="331" loading="lazy"></span>
+              <span class="work-label"><strong>Астана, 5 июля</strong><small>Видео · Съёмка и монтаж</small></span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <template>
+              <p>Дневные улицы, архитектура и вечерние огни в городской зарисовке на 32 секунды.</p>
+              <p class="case-credit">Съёмка и монтаж — Оксана Леонтьева</p>
+              <div class="case-grid">
+                <img src="./assets/astana-2.webp" alt="Дневная Астана с высоты" width="541" height="331">
+                <img src="./assets/astana-3.webp" alt="Огни Астаны ночью" width="541" height="331">
+              </div>
+              <div class="case-links"><a class="button" href="https://www.instagram.com/_._.oksanaa._._/reel/DacnXZ3O5Qv/">Смотреть Reel</a></div>
+            </template>
+          </article>
+
+          <article data-kind="interfaces">
+            <button class="work-card" type="button" data-case>
+              <span class="work-media screen"><img src="./assets/dtp-dashboard.webp" alt="" width="1600" height="1000" loading="lazy"></span>
+              <span class="work-label"><strong>Аналитика ДТП</strong><small>Интерфейс · ГИС-платформа</small></span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <template>
+              <p>Карта происшествий с фильтрами и обзорная панель для сравнения показателей аварийности. Моя роль в команде — фронтенд и анализ данных. На экранах учебные данные.</p>
+              <div class="case-grid">
+                <figure><a href="./assets/dtp-map.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/dtp-map.webp" alt="Карта происшествий и фильтры" width="1600" height="1000"></a><figcaption>Карта происшествий</figcaption></figure>
+                <figure><a href="./assets/dtp-dashboard.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/dtp-dashboard.webp" alt="Обзорная панель для сравнения показателей" width="1600" height="1000"></a><figcaption>Обзорная панель</figcaption></figure>
+              </div>
+            </template>
+          </article>
+
+          <article data-kind="film">
+            <button class="work-card" type="button" data-case>
+              <span class="work-media"><img src="./assets/arcana-cover.webp" alt="" width="1280" height="720" loading="lazy"></span>
+              <span class="work-label"><strong>13 in Your Destiny Matrix?</strong><small>Видео · Обложка и графика</small></span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <template>
+              <p>Обложка и графика ролика для Destiny Matrix Lab. В кадрах цветовые акценты помогают выделить нужный узел схемы.</p>
+              <div class="case-grid">
+                <img src="./assets/arcana-cover.webp" alt="Обложка с картой и числом 13" width="1280" height="720">
+                <img src="./assets/arcana-graphic.webp" alt="Кадр со схемой из ролика" width="640" height="360">
+              </div>
+              <div class="case-links"><a href="https://www.youtube.com/watch?v=jKuJX1-OuTQ">Ролик на YouTube</a><small>Для просмотра требуется вход.</small></div>
+            </template>
+          </article>
+
+          <article data-kind="graphics" id="graphics">
+            <button class="work-card" type="button" data-case>
+              <span class="work-media mockup elite"><img src="./assets/elite-wide.webp" alt="" width="312" height="220" loading="lazy"><img src="./assets/elite-vertical.webp" alt="" width="220" height="312" loading="lazy"></span>
+              <span class="work-label"><strong>Elite Startup Competition</strong><small>Графика · Плакаты</small></span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <template>
+              <p>Плакат для конкурса стартапов. Образ горы и крупный год связывают горизонтальный и вертикальный форматы.</p>
+              <div class="case-grid tall">
+                <figure><a href="./assets/elite-wide.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/elite-wide.webp" alt="Горизонтальный плакат с горой и числом 2026" width="312" height="220"></a><figcaption>Горизонтальный формат</figcaption></figure>
+                <figure><a href="./assets/elite-vertical.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/elite-vertical.webp" alt="Вертикальная версия плаката" width="220" height="312"></a><figcaption>Вертикальный формат</figcaption></figure>
+              </div>
+            </template>
+          </article>
+
+          <article data-kind="interfaces">
+            <button class="work-card" type="button" data-case>
+              <span class="work-media mockup sana"><img src="./assets/ai-sana-home.webp" alt="" width="221" height="456" loading="lazy"><img src="./assets/ai-sana-news.webp" alt="" width="222" height="399" loading="lazy"></span>
+              <span class="work-label"><strong>AI SANA</strong><small>Интерфейс · Веб-макеты</small></span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <template>
+              <p>Университетские веб-макеты. Главная знакомит с ИИ-агентами, а новости собраны в карточки публикаций.</p>
+              <div class="case-grid tall">
+                <figure><a href="./assets/ai-sana-home.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/ai-sana-home.webp" alt="Главная AI SANA" width="221" height="456"></a><figcaption>Главная</figcaption></figure>
+                <figure><a href="./assets/ai-sana-news.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/ai-sana-news.webp" alt="Сетка новостей AI SANA" width="222" height="399"></a><figcaption>Новости</figcaption></figure>
+              </div>
+            </template>
+          </article>
+
+          <article data-kind="interfaces">
+            <button class="work-card" type="button" data-case>
+              <span class="work-media screen"><img src="./assets/fire-map.webp" alt="" width="597" height="386" loading="lazy"></span>
+              <span class="work-label"><strong>Атлас пожарной активности</strong><small>Интерфейс · NASA Space Apps</small></span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <template>
+              <p>Командный проект KU-group. По календарю можно выбрать месяц наблюдений и открыть спутниковую карту с зафиксированной пожарной активностью.</p>
+              <div class="case-grid">
+                <figure><a href="./assets/fire-calendar.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/fire-calendar.webp" alt="Календарь активности по годам и месяцам" width="662" height="434"></a><figcaption>Календарь наблюдений</figcaption></figure>
+                <figure><a href="./assets/fire-map.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/fire-map.webp" alt="Спутниковая карта Лос-Анджелеса" width="597" height="386"></a><figcaption>Спутниковая карта</figcaption></figure>
+              </div>
+            </template>
+          </article>
+
+          <article data-kind="graphics">
+            <button class="work-card" type="button" data-case>
+              <span class="work-media mockup sup"><img src="./assets/sup-cover.webp" alt="" width="133" height="173" loading="lazy"><img src="./assets/sup-prices.webp" alt="" width="131" height="172" loading="lazy"><img src="./assets/sup-safety.webp" alt="" width="130" height="173" loading="lazy"></span>
+              <span class="work-label"><strong>Прокат SUP-бордов</strong><small>Графика · Карточки для соцсетей</small></span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <template>
+              <p>Серия карточек с общей палитрой и повторяющейся типографикой: обложка, тарифы и правила безопасности.</p>
+              <div class="case-grid three tall">
+                <figure><img src="./assets/sup-cover.webp" alt="Обложка серии о прокате SUP-бордов" width="133" height="173"><figcaption>Обложка</figcaption></figure>
+                <figure><img src="./assets/sup-prices.webp" alt="Карточка с тарифами проката" width="131" height="172"><figcaption>Тарифы</figcaption></figure>
+                <figure><img src="./assets/sup-safety.webp" alt="Карточка о безопасности на воде" width="130" height="173"><figcaption>Безопасность</figcaption></figure>
+              </div>
+            </template>
+          </article>
+
+          <article data-kind="graphics">
+            <button class="work-card" type="button" data-case>
+              <span class="work-media mockup university"><img src="./assets/ku-ml.webp" alt="" width="317" height="628" loading="lazy"><img src="./assets/ku-ai.webp" alt="" width="317" height="707" loading="lazy"></span>
+              <span class="work-label"><strong>Kozybayev University</strong><small>Графика · Информационные материалы</small></span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <template>
+              <p>Информационные материалы для KU ML School и Центра искусственного интеллекта. Иллюстрации и цвет помогают быстро различать блоки плакатов.</p>
+              <div class="case-grid tall">
+                <figure><a href="./assets/ku-ml.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/ku-ml.webp" alt="Плакат KU ML School с лампой" width="317" height="628"></a><figcaption>KU ML School</figcaption></figure>
+                <figure><a href="./assets/ku-ai.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/ku-ai.webp" alt="Информационный плакат Центра искусственного интеллекта" width="317" height="707"></a><figcaption>Центр искусственного интеллекта</figcaption></figure>
+              </div>
+            </template>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section interfaces" id="interfaces" aria-labelledby="interfaces-title">
-      <div class="wrap">
-        <div class="section-intro">
-          <h2 id="interfaces-title">Интерфейсы</h2>
-          <p>Приложение для часов, геоаналитика и университетские веб-макеты.</p>
-        </div>
-        <div class="interface-grid">
-          <article class="interface">
-            <div class="interface-copy">
-              <p class="eyebrow">Приложение для смарт-часов</p>
-              <h3>WatchB8</h3>
-              <p>Два экрана приложения. Обзор группирует показатели рядом с данными об активности, а отдельный график позволяет переключать интервалы истории.</p>
-              <p class="note">Показания и данные датчика скрыты.</p>
-            </div>
-            <div class="watch-board">
-              <figure>
-                <a class="zoom watch-image" href="./assets/watch-overview.webp" data-zoom aria-label="Увеличить обзор приложения WatchB8"><img src="./assets/watch-overview.webp" alt="Обзор здоровья и активности в WatchB8, значения скрыты" width="640" height="683" loading="lazy"></a>
-                <figcaption>Обзор</figcaption>
-              </figure>
-              <figure>
-                <a class="zoom watch-image" href="./assets/watch-chart.webp" data-zoom aria-label="Увеличить график приложения WatchB8"><img src="./assets/watch-chart.webp" alt="График истории измерений в WatchB8, данные скрыты" width="640" height="908" loading="lazy"></a>
-                <figcaption>График</figcaption>
-              </figure>
-            </div>
-          </article>
-          <article class="interface">
-            <div class="interface-copy">
-              <p class="eyebrow">ГИС-платформа / командный проект</p>
-              <h3>АИС «Аналитика ДТП»</h3>
-              <p>Карта происшествий с фильтрами и обзорная панель для сравнения показателей аварийности. Моя роль — фронтенд и анализ данных.</p>
-              <p class="note">На экранах учебные данные.</p>
-            </div>
-            <div class="data-board">
-              <figure>
-                <a class="zoom" href="./assets/dtp-map.webp" data-zoom aria-label="Увеличить карту происшествий"><img src="./assets/dtp-map.webp" alt="Карта происшествий с переключателями режимов и фильтрами" width="1600" height="1000" loading="lazy"></a>
-                <figcaption>Карта происшествий</figcaption>
-              </figure>
-              <figure>
-                <a class="zoom" href="./assets/dtp-dashboard.webp" data-zoom aria-label="Увеличить обзорную панель аналитики ДТП"><img src="./assets/dtp-dashboard.webp" alt="Обзорная панель с карточками показателей и сравнением периодов" width="1600" height="1000" loading="lazy"></a>
-                <figcaption>Обзорная панель</figcaption>
-              </figure>
-            </div>
-          </article>
-          <article class="interface">
-            <div class="interface-copy">
-              <p class="eyebrow">Kozybayev University / веб-макеты</p>
-              <h3>AI SANA</h3>
-              <p>Главная знакомит с университетскими ИИ-агентами. В новостном разделе события собраны в сетку карточек.</p>
-            </div>
-            <div class="sana-board">
-              <figure><a class="zoom" href="./assets/ai-sana-home.webp" data-zoom aria-label="Увеличить главную страницу AI SANA"><img src="./assets/ai-sana-home.webp" alt="Главная страница AI SANA с карточками ИИ-агентов" width="221" height="456" loading="lazy"></a><figcaption>Главная</figcaption></figure>
-              <figure><a class="zoom" href="./assets/ai-sana-news.webp" data-zoom aria-label="Увеличить страницу новостей AI SANA"><img src="./assets/ai-sana-news.webp" alt="Страница новостей AI SANA с карточками публикаций" width="222" height="399" loading="lazy"></a><figcaption>Новости</figcaption></figure>
-            </div>
-          </article>
-          <article class="interface atlas">
-            <div class="interface-copy">
-              <p class="eyebrow">NASA Space Apps / командный проект KU-group</p>
-              <h3>Атлас пожарной активности</h3>
-              <p>Календарь помогает выбрать месяц наблюдений, а спутниковая карта показывает, где была зафиксирована пожарная активность.</p>
-            </div>
-            <div class="data-board">
-              <figure>
-                <a class="zoom" href="./assets/fire-calendar.webp" data-zoom aria-label="Увеличить календарь наблюдений"><img src="./assets/fire-calendar.webp" alt="Календарь пожарной активности по годам и месяцам" width="662" height="434" loading="lazy"></a>
-                <figcaption>Календарь наблюдений</figcaption>
-              </figure>
-              <figure>
-                <a class="zoom" href="./assets/fire-map.webp" data-zoom aria-label="Увеличить спутниковую карту"><img src="./assets/fire-map.webp" alt="Спутниковая карта Лос-Анджелеса с выделенными ячейками пожарной активности" width="597" height="386" loading="lazy"></a>
-                <figcaption>Спутниковая карта</figcaption>
-              </figure>
-            </div>
-          </article>
-        </div>
+    <section class="about wrap" id="about" aria-labelledby="about-title">
+      <div class="about-copy">
+        <h2 id="about-title">Обо <span>мне</span></h2>
+        <p>Я Оксана Леонтьева, разработчик ПО и бизнес-аналитик. Работаю с веб- и мобильными интерфейсами, веду YouTube-канал и пробую разные форматы видео, от городской зарисовки до ролика по раскадровке.</p>
       </div>
-    </section>
-
-    <section class="graphics section" id="graphics" aria-labelledby="graphics-title">
-      <div class="wrap">
-        <div class="section-intro">
-          <h2 id="graphics-title">Графика</h2>
-          <p>Плакаты, карточки для соцсетей и материалы для университета.</p>
-        </div>
-        <div class="graphics-grid">
-          <article class="graphic">
-            <div class="art elite">
-              <a class="zoom" href="./assets/elite-wide.webp" data-zoom aria-label="Увеличить горизонтальный плакат"><img src="./assets/elite-wide.webp" alt="Горизонтальный плакат с горой и цифрами 2026" width="312" height="220" loading="lazy"></a>
-              <a class="zoom" href="./assets/elite-vertical.webp" data-zoom aria-label="Увеличить вертикальный плакат"><img src="./assets/elite-vertical.webp" alt="Вертикальная версия плаката с горой и цифрами 2026" width="220" height="312" loading="lazy"></a>
-            </div>
-            <h3>Elite Startup Competition</h3>
-            <p class="note">Один образ горы в двух форматах плаката.</p>
-          </article>
-          <article class="graphic">
-            <div class="art sup">
-              <a class="zoom" href="./assets/sup-cover.webp" data-zoom aria-label="Увеличить обложку проката"><img src="./assets/sup-cover.webp" alt="Обложка серии о прокате SUP-бордов" width="133" height="173" loading="lazy"></a>
-              <a class="zoom" href="./assets/sup-prices.webp" data-zoom aria-label="Увеличить карточку с тарифами"><img src="./assets/sup-prices.webp" alt="Синяя карточка с тарифами проката" width="131" height="172" loading="lazy"></a>
-              <a class="zoom" href="./assets/sup-safety.webp" data-zoom aria-label="Увеличить карточку о безопасности"><img src="./assets/sup-safety.webp" alt="Синяя карточка о безопасности на воде" width="130" height="173" loading="lazy"></a>
-            </div>
-            <h3>Прокат SUP-бордов</h3>
-            <p class="note">Обложка, тарифы и правила безопасности.</p>
-          </article>
-          <article class="graphic">
-            <div class="art academic">
-              <a class="zoom" href="./assets/ku-ml.webp" data-zoom aria-label="Увеличить плакат KU ML"><img src="./assets/ku-ml.webp" alt="Плакат KU ML School с иллюстрацией лампы" width="317" height="628" loading="lazy"></a>
-              <a class="zoom" href="./assets/ku-ai.webp" data-zoom aria-label="Увеличить плакат Центра искусственного интеллекта"><img src="./assets/ku-ai.webp" alt="Информационный плакат Центра искусственного интеллекта" width="317" height="707" loading="lazy"></a>
-            </div>
-            <div><h3>Kozybayev University</h3><p class="note">Информационные материалы для KU ML School и Центра искусственного интеллекта.</p></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="about section" id="about" aria-labelledby="about-title">
-      <div class="wrap about-inner">
-        <h2 id="about-title">Обо мне</h2>
-        <div>
-          <p>Я Оксана Леонтьева, разработчик ПО и бизнес-аналитик. Работаю с веб- и мобильными интерфейсами, веду YouTube-канал и экспериментирую с раскадровкой и сборкой коротких видео.</p>
-          <ul class="socials">
-            <li><a class="text-link" href="https://www.youtube.com/@DestinyMatrixLab">YouTube</a></li>
-            <li><a class="text-link" href="https://www.instagram.com/_._.oksanaa._._/">Instagram</a></li>
-            <li><a class="text-link" href="https://github.com/Oksana77-f">GitHub</a></li>
-          </ul>
-        </div>
+      <div class="about-frames" aria-hidden="true">
+        <img src="./assets/astana-3.webp" alt="" width="541" height="331" loading="lazy">
+        <img src="./assets/autumn.webp" alt="" width="862" height="500" loading="lazy">
       </div>
     </section>
   </main>
 
-  <footer class="wrap bottom"><span>Оксана Леонтьева</span><a href="#top">К началу</a></footer>
-  <dialog class="lightbox" aria-label="Просмотр изображения">
-    <form method="dialog"><button aria-label="Закрыть изображение" autofocus>×</button></form>
-    <img alt="">
+  <footer class="contacts" id="contacts" aria-labelledby="contacts-title">
+    <div class="wrap contact-inner">
+      <h2 id="contacts-title"><span class="spark" aria-hidden="true"></span>Контакты</h2>
+      <p>Открыта к совместным проектам.</p>
+      <nav aria-label="Публичные профили">
+        <a href="https://www.instagram.com/_._.oksanaa._._/">Instagram</a>
+        <a href="https://www.youtube.com/@DestinyMatrixLab">YouTube</a>
+        <a href="https://github.com/Oksana77-f">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+
+  <dialog class="case-dialog" aria-labelledby="case-title">
+    <div class="case-inner">
+      <form method="dialog"><button aria-label="Закрыть работу" autofocus>×</button></form>
+      <p class="eyebrow" id="case-category"></p>
+      <h2 id="case-title"></h2>
+      <div id="case-details"></div>
+    </div>
   </dialog>
 </body>
 </html>
