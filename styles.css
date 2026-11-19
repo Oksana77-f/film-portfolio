@@ -94,6 +94,7 @@ h2 { font: normal clamp(2.75rem, 6.3vw, 6.1rem)/.98 Georgia, serif; letter-spaci
 h3 { font-size: clamp(1.25rem, 2.4vw, 2rem); line-height: 1.16; letter-spacing: -.042em; }
 .video-caption h3 { margin-top: 7px; }
 .note { color: var(--muted); font-size: .92rem; }
+.work-credit { color: var(--warm); font-size: .89rem; font-weight: 650; margin-top: 8px; }
 
 .interface { display: grid; grid-template-columns: minmax(200px, .65fr) minmax(0, 1.35fr); align-items: center; gap: clamp(20px, 5vw, 70px); padding-block: 15px 40px; }
 .interface + .interface { border-top: 1px solid var(--line); padding-block: 40px 0; }
@@ -102,6 +103,10 @@ h3 { font-size: clamp(1.25rem, 2.4vw, 2rem); line-height: 1.16; letter-spacing: 
 .interface-copy p:not(.eyebrow) { max-width: 36ch; }
 .interface-copy .note { margin-top: 12px; }
 .watch-board, .sana-board { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: clamp(12px, 3vw, 30px); padding: clamp(14px, 4vw, 42px); }
+.interface.interface-data { grid-template-columns: 1fr; gap: 24px; padding-bottom: 40px; }
+.interface-data .interface-copy p:not(.eyebrow) { max-width: 62ch; }
+.data-board { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: clamp(12px, 2.5vw, 26px); background: #251f1f; color: #efdfd8; }
+.data-board figure { min-width: 0; }
 .watch-board { background: #251f1f; color: #efdfd8; }
 .watch-board figure, .sana-board figure { min-width: 0; }
 .watch-image { border: 1px solid #614843; border-radius: 14px; overflow: hidden; aspect-ratio: .82; background: #141312; }
@@ -166,6 +171,8 @@ figcaption { padding-top: 10px; font-size: .875rem; text-align: center; }
   .video-caption { margin-top: 12px; }
   .interface { gap: 18px; padding-block: 9px 27px; }
   .interface + .interface { padding-top: 27px; }
+  .interface.interface-data { gap: 18px; padding-bottom: 27px; }
+  .data-board { grid-template-columns: 1fr; gap: 18px; }
   .university { gap: 5px; padding-top: 23px; }
 }
 
