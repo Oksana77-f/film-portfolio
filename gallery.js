@@ -53,6 +53,7 @@ syncFilter();
 window.addEventListener('hashchange', syncFilter);
 
 const dialog = document.querySelector('.case-dialog');
+const caseScroll = dialog.querySelector('.case-inner');
 const caseTitle = document.querySelector('#case-title');
 const caseCategory = document.querySelector('#case-category');
 const caseDetails = document.querySelector('#case-details');
@@ -65,6 +66,7 @@ gallery.addEventListener('click', (event) => {
   caseCategory.textContent = trigger.querySelector('small').textContent;
   caseDetails.replaceChildren(trigger.closest('article').querySelector('template').content.cloneNode(true));
   dialog.showModal();
+  caseScroll.scrollTop = 0;
 });
 
 dialog.addEventListener('click', (event) => {
