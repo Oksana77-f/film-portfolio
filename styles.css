@@ -610,8 +610,6 @@ p { text-wrap: pretty; }
 }
 .artwork-grid figure > a { display: block; }
 .case-grid.artwork-grid img { max-height: 365px; }
-.watch-more summary { cursor: pointer; color: var(--text); font-weight: 650; }
-.watch-more summary:hover { color: var(--amber); }
 .banner-nav { display: flex; flex-wrap: wrap; gap: 7px; }
 .banner-nav a {
   display: inline-block;
